@@ -1,0 +1,15 @@
+﻿<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="~/Content/LoginPage.css" rel="stylesheet" />
+<img src="~/Content/Images/TheLetterDaysLogo.png" />
+<form class="loginBox">
+    <div class="inputField">
+        <input id="userField" type="text" name="usernameField" placeholder="USERNAME">
+    </div>
+    <div class="inputField">
+        <input id="passField" type="password" name="passwordField" placeholder="PASSWORD">
+    </div>
+    <div id="loginButton">
+        <button type="button" data-url="@Url.Action("Dashboard", "Home")">SIGN IN</button>
+    </div>
+</form>
+<script src="~/Scripts/Pages-JS/LoginPage.js"></script>

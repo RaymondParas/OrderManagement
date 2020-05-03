@@ -1,0 +1,42 @@
+﻿<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="~/Content/DashboardPage.css" rel="stylesheet" />
+<div id="loadSpinner"></div>
+<div class="dashboard">
+    <div class="headerSection">
+        <div class="headerWrapper">
+            <div>
+                <img src="~/Content/Images/TheLetterDaysLogo.png" />
+            </div>
+            <div>
+                <h1>Order Tracker</h1>
+            </div>
+        </div>
+    </div>
+    <div class="tableSection">
+        <div id="pendingTable" class="tableContainer" style="display: none;">
+            <div id="pendingLabel" class="tableHeader">
+                <label>Pending</label>
+            </div>
+            <table id="pending"></table>
+        </div>
+        <div id="inprogressTable" class="tableContainer" style="display: none;">
+            <div id="inProgressLabel" class="tableHeader">
+                <label>In Progress</label>
+            </div>
+            <table id="inprogress"></table>
+        </div>
+        <div id="completedTable" class="tableContainer" style="display: none;">
+            <div id="completedLabel" class="tableHeader">
+            <label>Completed</label>
+            </div>
+            <table id="completed"></table>
+        </div>
+        <div id="shippedTable" class="tableContainer" style="display: none;">
+            <div id="shippedLabel" class="tableHeader">
+                <label>Shipped</label>
+            </div>
+            <table id="shipped"></table>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/Pages-JS/DashboardPage.js"></script>

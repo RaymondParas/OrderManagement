@@ -1,0 +1,254 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    background: #f4f4f4;
+    color: #535353;
+    width: 100%;
+    height: 100%;
+    background-image: url('Images/DashboardBackground.jpg');
+    background-size: cover;
+}
+
+.load-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    z-index: 1;
+    border: 1vw solid transparent;
+    border-radius: 50%;
+    border-top: 1vw solid #D89393;
+    width: 15vw;
+    height: 15vw;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.body-content {
+    padding: 67px 171px 67px 171px;
+}
+
+.dashboard {
+    width: 100%;
+    height: auto;
+}
+
+.dashboard .headerSection .headerWrapper{
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dashboard .headerSection img {
+    width: 126px;
+    height: 126px;
+    display: inline;
+    float: left;
+    margin-right: 20px;
+}
+
+.dashboard .headerSection h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 50px;
+    height: 126px;
+    display: inline-block;
+    clear: both;
+    text-align: center;
+    line-height: 250%;
+    letter-spacing: 10px;
+}
+
+.dashboard .tableContainer {
+    margin-top: 69px;
+    margin-bottom: 69px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+}
+
+.dashboard .tableContainer table {
+    text-align: center;
+    width: 100%;
+    overflow: scroll;
+    table-layout: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+th, td {
+    height: 80px;
+    text-align: center;
+    margin: 0 10px 0 10px;
+    overflow-x: scroll;
+}
+
+th {
+    border-bottom: 3px solid #535353;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+td {
+    border-bottom: 1px solid #535353;
+    font-size: 20px;
+}
+
+.tableContainer .tableHeader {
+    width: 415px;
+    height: 80px;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.tableContainer .tableHeader label{
+    width: 50%;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 25px;
+    line-height: 350%;
+}
+
+#pending th {
+    border-top: 7px solid #F0E1E1;
+}
+
+#inprogress th {
+    border-top: 7px solid #EFC8C8;
+}
+
+#completed th {
+    border-top: 7px solid #D89393;
+}
+
+#shipped th {
+    border-top: 7px solid #C66A6A;
+}
+
+#pendingLabel {
+    background-color: #F0E1E1;
+}
+
+#inProgressLabel {
+    background-color: #EFC8C8;
+}
+
+#completedLabel {
+    background-color: #D89393;
+    color: white;
+}
+
+#shippedLabel {
+    background-color: #C66A6A;
+    color: white;
+}
+
+td[class*='orderStatusCol'], td[class^='orderStatusCol'],
+td[class*='paymentStatusCol'], td[class^='paymentStatusCol'] {
+    width: 213px;
+    padding: 0 5px 0 5px;
+}
+
+td[class*='orderStatusCol'] div, td[class^='orderStatusCol'] div,
+td[class*='paymentStatusCol'] div, td[class^='paymentStatusCol'] div {
+    max-width: 100%;
+    height: 60px;
+    border-radius: 40px;
+    line-height: 300%;
+    overflow-x: scroll;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.orderStatusCol-Pending div, .orderStatusDrop-Pending {
+    background-color: #F0E1E1;
+    color: #535353;
+}
+
+.orderStatusCol-InProgress div, .orderStatusDrop-InProgress {
+    background-color: #EFC8C8;
+    color: #535353;
+}
+
+.paymentStatusCol-Pending div, .orderStatusCol-Completed div,
+.paymentStatusDropdown-Pending, .orderStatusDrop-Completed {
+    background-color: #D89393;
+    color: white;
+}
+
+.paymentStatusCol-Received div, .orderStatusCol-Shipped div,
+.paymentStatusDropdown-Received, .orderStatusDrop-Shipped {
+    background-color: #C66A6A;
+    color: white;
+}
+
+.orderNumberCol {
+    width: 266px;
+}
+
+.productCol {
+    width: 447px;
+}
+
+.quantityCol {
+    width: 126px;
+}
+
+.priceCol {
+    width: 176px;
+}
+
+ul.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul.dropdown-content a:hover {
+    background-color: #DCDCDC;
+}
